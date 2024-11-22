@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable scrolling */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    width: 100vw; /* Ensures the navbar doesn't overflow */
+    height: 50px; /* Define height to prevent overflow */
+    overflow: hidden; /* Disable scrolling within navbar */
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar a {
+    color: black;
+    width: 16vw;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(65, 86, 225);
+    color: white;
+    text-align: left;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+h1 {
+    font-family: georgia, serif;
+    font-size: 45px;
+    color: royalblue;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    overflow: hidden; /* Disable scrolling within table */
+}
+
+
+    </style>
+</head>
+<body>
+   
+<table>
+    <tr>
+        <td>
+            <div>
+                <img src="img/logo.jpg" alt="logo" style="border-radius: 30%;">
+                </div>
+        </td>
+        <td>
+            <h1>Ezsi E-Books</h1>
+        </td>
+    </tr>
+    
+</table>
+
+    
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="right.html" target="rightFrame">Home</a>
+            <a href="register.html" target="rightFrame">Register</a>
+            <a href="login.html" target="rightFrame">Login</a>
+            <a href="catalogue.html" target="rightFrame">Catalogue</a>
+            <a href="cart.html" target="rightFrame">Cart</a>
+        </div>
+    
+</div>
+</body>
+</html>

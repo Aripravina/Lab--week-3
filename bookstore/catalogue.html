@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .category-links {
+            margin-bottom: 20px;
+        }
+        .category-links span {
+            color: royalblue;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .book {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .book img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .book-details {
+            flex: 1;
+        }
+        .book-details h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .book-details p {
+            margin: 5px 0;
+        }
+        .book button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: royalblue;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .book button:hover {
+            background-color: rgb(65, 86, 225);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="category-links">
+            <span>CSE</span>
+            <span>ECE</span>
+            <span>EEE</span>
+            <span>Civil</span>
+        </div>
+        <div class="book">
+            <img src="img/cse1.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Computer Science And Engineering(Recent Trends)</h3>
+                <p>Author:  R.Rajesh & Prabhat Ranjan</p>
+                <p>Price: ₹500.00</p>
+            </div>
+            <button onclick="addToCart('CSE1', 500.00, 'cse1.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/eee1.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Power Plant Engineering</h3>
+                <p>Author: Dr.N.Dhanasekar & Dr.S.Chockalingam & S.Suriyaprakash</p>
+                <p>Price: ₹300.00</p>
+            </div>
+            <button onclick="addToCart('EEE1', 300.00, 'eee1.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/ece1.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Introduction To Analog & Digital Communications</h3>
+                <p>Author: Simon Haykin Michael Moher</p>
+                <p>Price: ₹300.00</p>
+            </div>
+            <button onclick="addToCart('ECE1', 300.00, 'ece1.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="IMG/CIVIL1.png" alt="Book Image">
+            <div class="book-details">
+                <h3>Advanced Construction Technology</h3>
+                <p>Author: Mohd.Adil Husain</p>
+                <p>Price: ₹350.00</p>
+            </div>
+            <button onclick="addToCart('CIVIL1', 300.00, 'civil1.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/cse2.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Advances In Computer Science And Engineering</h3>
+                <p>Author: Pankaj Dhaka</p>
+                <p>Price: ₹450.00</p>
+            </div>
+            <button onclick="addToCart('CSE2', 450.00, 'cse2.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/cse3.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Introduction To Computer Science </h3>
+                <p>Author: Perry Donham</p>
+                <p>Price: ₹399.00</p>
+            </div>
+            <button onclick="addToCart('CSE2', 450.00, 'cse3.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/ece2.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Electronic Devices And Circuit Theory</h3>
+                <p>Author: Robert L. Boylestad & Louis Nashelsky</p>
+                <p>Price: ₹399.00</p>
+            </div>
+            <button onclick="addToCart('ECE2', 399.00, 'ece2.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/ece3.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Linear Integrated Circuits</h3>
+                <p>Author: D.Roy Choudhary Shall B.Jain</p>
+                <p>Price: ₹299.00</p>
+            </div>
+            <button onclick="addToCart('ECE3', 299.00, 'ece3.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/eee2.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Basic Electrical And Electronics Engineering</h3>
+                <p>Author: B.R.Patil</p>
+                <p>Price: ₹599.00</p>
+            </div>
+            <button onclick="addToCart('EEE2', 599.00, 'eee2.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="img/eee3.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Applied Physics</h3>
+                <p>Author: Dr.T.V.S.Arun Murthy & Dr.M.N.Avadhanulu</p>
+                <p>Price: ₹199.00</p>
+            </div>
+            <button onclick="addToCart('EEE3', 199.00, 'eee3.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="IMG/CIVIL2.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>Basic Civil Engineering</h3>
+                <p>Author: Dr.A.K Dwived & Abihishek Arye Kamlesh Kumar Choudhary</p>
+                <p>Price: ₹299.00</p>
+            </div>
+            <button onclick="addToCart('CIVIL2', 299.00, 'civil2.png')">Add to Cart</button>
+        </div>
+        <div class="book">
+            <img src="IMG/CIVIL3.jpg" alt="Book Image">
+            <div class="book-details">
+                <h3>GATE Practice Booket</h3>
+                <p>Author: ACE </p>
+                <p>Price: ₹510.00</p>
+            </div>
+            <button onclick="addToCart('CIVIL3', 510.00, 'civil3.png')">Add to Cart</button>
+        </div>
+            </div>
+
+    <script>
+        function addToCart(title, price, image) {
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const existingItemIndex = cart.findIndex(item => item.title === title);
+                if (existingItemIndex > -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({
+                        title,
+                        price,
+                        image,
+                        quantity: 1
+                    });
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${title} added to cart!`);
+            } else {
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+
+</body>
+</html>
